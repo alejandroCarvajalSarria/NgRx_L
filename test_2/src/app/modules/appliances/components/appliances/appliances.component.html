@@ -1,0 +1,10 @@
+List of appliances:
+
+
+isLoading = {{isLoading$ | async}}
+
+<ul>
+    <li *ngFor="let appliance of appliances$ | async">
+        {{appliance.equipment}}
+    </li>
+</ul>
