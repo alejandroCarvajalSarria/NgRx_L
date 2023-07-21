@@ -8,6 +8,8 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class ApplianceService {
 
+  constructor(private httpService : HttpService) { }
+
   getAppliances(): Observable<ApplianceInterface[] >{
     return this.httpService.get('https://random-data-api.com/api/appliance/random_appliance?size=30')
       .pipe(
@@ -22,5 +24,4 @@ export class ApplianceService {
       )
   }
 
-  constructor(private httpService : HttpService) { }
 }
